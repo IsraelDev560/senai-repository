@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrtoLab</title>
+    <link rel="stylesheet" href="style/style-clincs.css">
+    <link rel="icon" href="img/favicon.png">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjFKNFaAyL8Tw7P22wpF_smfV-G8JNzEA&libraries=places"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img id="img-ortolab" height="60" src="img/logo.png" alt="OrtoLab" title="OrtoLab"
+                onclick="window.location.href = 'index.html'" ;>
+            <a href="index.html">TELA INICIAL</a>
+            <a href="index2.html">IDENTIFIQUE SUA DOR</a>
+            <a href="index3.html">CLINICAS PRÓXIMAS</a>
+        </div>
+    </header>
+    <main>
+        <div id="container-search">
+            <h1>Vamos encontrar clínicas próximas de você?</h1>
+            <div class="searching">
+                <div class="select-wrapper">
+                    <label for="servico">Tipo de Serviço</label>
+                    <select id="servico" name="servico">
+                        <option value="ortopedista">Ortopedista</option>
+                        <option value="masoterapeuta">Masoterapeuta</option>
+                        <option value="fisioterapia">Fisioterapia</option>
+                        <option value="traumatologista">Traumatologista</option>
+                        <option value="acupunturista">Acupuntura</option>
+                    </select>
+                </div>
+                <button id="search-button" onclick="pesquisarClinicas()">Pesquisar</button>
+                <button id="close-button" onclick="fecharResultados()">Fechar</button>
+
+                <div id="resultados" style="height: 400px; width: 100%;">
+                    <h4 id="text-resultados">Após escolher um serviço, Iremos fazer uma pesquisa num raio de 20km.</h4>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <footer id="rodape">
+        <p>© 2024 OrtoLab. Todos os direitos reservados. Desenvolvido por Israel.</p>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

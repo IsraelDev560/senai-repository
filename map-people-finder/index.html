@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapa com Marcadores e Filtros</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <input type="text" id="inputAddress" placeholder="Digite o nome da rua">
+    <button onclick="filterMarkers()">Filtrar</button>
+
+    <script>
+        var map;
+        const markers = [];
+
+        function initMap() {
+            let initialLocation = { lat: -12.2652, lng: -38.9565 }; // endereço de feira. terá que colocar pra área que deseja.
+            let mapOptions = {
+                zoom: 13,
+                center: initialLocation
+            };
+            map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            // Adicione os clientes aqui conforme necessário
+            addClient({ name: 'João', streets: ['Rua Castro Alves', 'R. Castro Alves'], address: 'Rua Castro Alves', cep: '12345-678', phone: '(11) 9999-9999', position: { lat: -12.25634, lng: -38.96148 } });
+            addClient({ name: 'Paulo', streets: ['Avenida Presidente Dutra', 'Av. Pres. Dutra'], address: 'Av. Pres. Dutra', cep: '54321-876', phone: '(11) 8888-8888', position: { lat: -12.259747, lng: -38.959336 } });
+            addClient({ name: 'Maria', streets: ['Avenida Presidente Dutra', 'Av. Pres. Dutra'], address: 'Av. Pres. Dutra', cep: '54321-876', phone: '(11) 8888-8888', position: { lat: -12.259761, lng: -38.958855 } });
+
+        }
+
+        function addClient(clientInfo) {
+            let marker = new google.maps.Marker({
+                position: clientInfo.position,
+                map: map,
+                title: clientInfo.name
+            });
+            let infoWindow = new google.maps.InfoWindow({
+                content: `<h3>${clientInfo.name}</h3><p>Endereço: ${clientInfo.address}</p><p>CEP: ${clientInfo.cep}</p><p>Telefone: ${clientInfo.phone}</p>`
+            });
+            marker.addListener('click', function () {
+                infoWindow.open(map, marker);
+            });
+            markers.push({ marker, clientInfo });
+        }
+
+        function filterMarkers() {
+            let inputAddress = document.getElementById('inputAddress').value.toLowerCase();
+            markers.forEach(function (item) {
+                let marker = item.marker;
+                let clientInfo = item.clientInfo;
+                let found = false;
+                clientInfo.streets.forEach(function(street) {
+                    if (street.toLowerCase().includes(inputAddress)) {
+                        found = true;
+                    }
+                });
+                if (found || clientInfo.name.toLowerCase().includes(inputAddress)) {
+                    marker.setVisible(true);
+                } else {
+                    marker.setVisible(false);
+                }
+            });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=SuaKEYAqui&callback=initMap"> // <-- lembre-se de colocar sua key aqui
+    </script>
+</body>
+</html>

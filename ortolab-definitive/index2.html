@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrtoLab</title>
+    <link rel="stylesheet" href="style/style-body.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img id="img-ortolab" height="60" src="img/logo.png" alt="OrtoLab" title="OrtoLab"
+                onclick="window.location.href = 'index.html'" ;>
+            <a href="index.html">TELA INICIAL</a>
+            <a href="index2.html">IDENTIFIQUE SUA DOR</a>
+            <a href="index3.html">CLINICAS PRÓXIMAS</a>
+        </div>
+    </header>
+
+    <div class="painsinfo">
+
+        <h1>Tem duvidas sobre tipos de dores?</h1>
+        <h2>Logo abaixo temos informações sobre: </h2><br>
+        <div class="box">
+            <div class="button">
+                <button title="Dores nas articulações" id="button-articulacoes" onclick="mostrarDor(event)" class="button-articulacoes">oooo</button>
+                <button title="Dores musculares" id="button-musculares" onclick="mostrarDor(event)" class="button-musculares">oooo</button>
+                <button title="Dores ósseas" id="button-osseas" onclick="mostrarDor(event)" class="button-osseas">oooo</button>
+                <button title="Hérnias" id="button-hernias" onclick="mostrarDor(event)" class="button-hernias">oooo</button>
+                <button title="Lesões" id="button-lesoes" onclick="mostrarDor(event)" class="button-lesoes">oooo</button>
+            </div>
+            <a href="#pains" >
+                <img width="70" height="70"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwmqU4mTOj3BgJQnVsdxVT6k-JKK5Fy5aaag&usqp=CAU" alt="Dores nas articulações">
+            </a>
+
+            <a href="#pains">
+                <img width="70" height="70" 
+                    src="https://cdn-icons-png.flaticon.com/512/5219/5219407.png" alt="Dores musculares">
+            </a>
+            <a href="#pains">
+                <img width="70" height="70" 
+                    src="https://cdn-icons-png.flaticon.com/512/3782/3782568.png" alt="Dores ósseas">
+            </a>
+            <a href="#pains">
+                <img width="70" height="70" 
+                    src="https://cdn-icons-png.flaticon.com/512/7220/7220474.png" alt="Hérnias">
+            </a>
+            <a href="#pains">
+                <img width="70" height="70"  
+                    src="https://cdn-icons-png.flaticon.com/512/6903/6903890.png" alt="Lesões">
+            </a>
+        </div>
+
+    </div>
+    <footer id="pains">
+
+        <h1>Clique a onde você sente dor</h1>
+
+        <div class="body">
+            <div style="display: none;" class="type-pains">
+                <p></p>
+                <button class="close-buttons" onclick="closeDor(event)">Fechar</button>
+            </div>
+
+            <div class="body-parts">
+                <button class="trapezio-direito" id="trapezio-direito" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="trapezio-esquerdo" id="trapezio-esquerdo" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="ombro-direito" id="ombro-direito" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="ombro-esquerdo" id="ombro-esquerdo" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="cotovelo-direito" id="cotovelo-direito" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="cotovelo-esquerdo" id="cotovelo-esquerdo" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="mao-direita" id="mao-direita" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="mao-esquerda" id="mao-esquerda" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="quadril-direito" id="quadril-direito" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="quadril-esquerdo" id="quadril-esquerdo" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="joelho-direito" id="joelho-direito" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="joelho-esquerdo" id="joelho-esquerdo" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="tornozelo-direito" id="tornozelo-direito" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body-parts">
+                <button class="tornozelo-esquerdo" id="tornozelo-esquerdo" onclick="openBody(event)">oo</button>
+                <div style="display: none;" class="result-body">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBody(event)">Fechar</button>
+                </div>
+            </div>
+
+
+            <div class="img-body">
+                <img src="img/corpo-frente.png" alt="">
+            </div>
+        </div>
+
+        <!--Parte de Trás-->
+        <div class="body">
+            <div class="body-parts">
+                <button class="pescoço" id="pescoço" onclick="openBackBody(event)">oo</button>
+                <div style="display: none;" class="result-body-back">
+                    <p></p>
+                    <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                </div>
+            </div>
+
+            <div class="body">
+                <div class="body-parts">
+                    <button class="trapezio-posterior-direito" id="trapezio-posterior-direito"
+                        onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+
+                <div class="body-parts">
+                    <button class="trapezio-posterior-esquerdo" id="trapezio-posterior-esquerdo"
+                        onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="ombro-posterior-direito" id="ombro-posterior-direito"
+                        onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="ombro-posterior-esquerdo" id="ombro-posterior-esquerdo"
+                        onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="cotovelo-direito." id="cotovelo-direito-back" onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="cotovelo-esquerdo." id="cotovelo-esquerdo-back" onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="mao-direita." id="mao-direita-back" onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="mao-esquerda." id="mao-esquerda-back" onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="coluna" id="coluna" onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="lombar" id="lombar" onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="quadril-posterior-direito" id="quadril-posterior-direito"
+                        onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="quadril-posterior-esquerdo" id="quadril-posterior-esquerdo"
+                        onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="joelho-posterior-direito" id="joelho-posterior-direito"
+                        onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="joelho-posterior-esquerdo" id="joelho-posterior-esquerdo"
+                        onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="tornozelo-posterior-direito" id="tornozelo-posterior-direito"
+                        onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+                <div class="body-parts">
+                    <button class="tornozelo-posterior-esquerdo" id="tornozelo-posterior-esquerdo"
+                        onclick="openBackBody(event)">oo</button>
+                    <div style="display: none;" class="result-body-back">
+                        <p></p>
+                        <button class="close-buttons" onclick="closeBackBody(event)">Fechar</button>
+                    </div>
+                </div>
+
+                <!--Imagem do corpo atrás-->
+                <div class="img-body">
+                    <img src="img/corpo-atras.png" alt="">
+                </div>
+            </div>
+    </footer>
+    <footer id="rodape">
+        <p>© 2024 OrtoLab. Todos os direitos reservados. Desenvolvido por Israel.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

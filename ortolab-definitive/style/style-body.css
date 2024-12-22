@@ -1,0 +1,1093 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome e no Safari */
+}
+
+body{
+    color: #F2F0F5;
+    font-family: arial;
+    background-image: linear-gradient(to right, #1C0436, #6A0572);
+}
+
+/*navbar*/
+header{ 
+    width: 98.7%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    text-align: center;
+    
+}
+
+#rodape{
+    background-color: #3C0549; 
+    color: white; 
+    text-align: center; 
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    bottom: 0;
+    left: 0;
+    width: 98.7%;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+.logo{
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    display: flex;
+      
+}
+
+#img-ortolab {
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar o mouse sobre o link */
+}
+
+
+
+.logo a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*fim navbar*/
+
+
+
+
+/* botões invisiveis dos icones*/
+
+.button button {
+    display: inline-block;
+    opacity: 0;
+    color: #ffffff;
+    padding: 20px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Espaçamento entre os botões */
+}
+
+/* Estilos para os links */
+.box {
+    position: relative; /* Permitir posicionamento absoluto dos botões */
+}
+
+/* Estilos para cada link */
+.box a {
+    display: block; /* Tornar os links elementos de bloco para ocupar o espaço adequado */
+    margin-bottom: 10px; /* Espaçamento entre os links */
+}
+
+/* Posicionamento absoluto dos botões */
+#button-articulacoes {
+    position: absolute;
+    top: 0;
+    left: 8%;
+    font-size: 16px;
+}
+
+#button-musculares {
+    position: absolute;
+    top: 0;
+    left: 27%; /* Espaçamento entre os botões */
+    font-size: 16px;
+}
+
+#button-osseas {
+    position: absolute;
+    top: 0;
+    left: 48%; /* Espaçamento entre os botões */
+    font-size: 16px;
+}
+
+#button-hernias {
+    position: absolute;
+    top: 0;
+    left: 68%; /* Espaçamento entre os botões */
+    font-size: 16px;
+}
+
+#button-lesoes {
+    position: absolute;
+    left: 438px; /* Espaçamento entre os botões */
+    font-size: 16px;
+}
+
+/*icones de tipos de dores*/
+.box{
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.box img{
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #F2F0F5;
+    width: 50px;
+    height: 50px;
+   
+}
+/*fim icones de tipos de dores*/
+
+.painsinfo {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Adicionado para melhor adaptação */
+    padding: 20px 0;
+}
+
+footer{
+    padding: 30px 0px;
+}
+
+footer h1{
+    text-align: center;
+}
+
+.body button{
+    background-color: #1C0436;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.body {
+    position: relative;
+    margin: 0 auto;
+    width: 400px; /* Defina a largura desejada */
+    height: auto; /* A altura será ajustada automaticamente */ 
+}
+
+
+
+.body-parts {
+    position: absolute;
+    background-color: transparent;
+    
+}
+
+/*BOTÕES DA PARTE DA FRENTE*/
+
+.trapezio-direito,
+.trapezio-esquerdo,
+.ombro-direito,
+.ombro-esquerdo,
+.cotovelo-direito,
+.cotovelo-esquerdo,
+.mao-direita,
+.mao-esquerda,
+.quadril-direito,
+.quadril-esquerdo,
+.joelho-direito,
+.joelho-esquerdo,
+.tornozelo-direito,
+.tornozelo-esquerdo{
+    position: absolute;
+    z-index: 1; /* Para sobrepor a imagem */
+    background-color: transparent; /* Para tornar o botão transparente */
+    border: none; /* Para remover a borda */
+    cursor: pointer; /* Para mostrar o cursor como ponteiro */
+    opacity: 0;
+}
+
+/*BOTÕES DA PARTE DE TRÁS*/
+.trapezio-posterior-direito,
+.trapezio-posterior-esquerdo,
+.ombro-posterior-direito,
+.ombro-posterior-esquerdo,
+#cotovelo-direito-back,
+#cotovelo-esquerdo-back,
+#mao-direita-back,
+#mao-esquerda-back,
+.quadril-posterior-direito,
+.quadril-posterior-esquerdo,
+.lombar,
+.joelho-posterior-direito,
+.joelho-posterior-esquerdo,
+.tornozelo-posterior-direito,
+.tornozelo-posterior-esquerdo,
+.pescoço,
+.coluna{
+    position: absolute;
+    z-index: 1; /* Para sobrepor a imagem */
+    background-color: transparent; /* Para tornar o botão transparente */
+    border: none; /* Para remover a borda */
+    cursor: pointer; /* Para mostrar o cursor como ponteiro */
+    opacity: 0;
+}
+
+/* seção de partes do corpo da frente*/
+.trapezio-direito {
+    font-size: 22px;
+    top: 120px; /* Posição do primeiro botão */
+    left: 210px; /* Posição do primeiro botão */
+    
+    
+}
+
+.trapezio-esquerdo {
+    font-size: 22px;
+    top: 120px; /* Posição do segundo botão */
+    left: 140px; /* Posição do segundo botão */
+    
+}
+
+.ombro-direito {
+    font-size: 24px;
+    top: 150px; /* Posição do primeiro botão */
+    left: 250px; /* Posição do primeiro botão */
+    
+    
+}
+
+.ombro-esquerdo {
+    font-size: 24px;
+    top: 150px; /* Posição do segundo botão */
+    left: 105px; /* Posição do segundo botão */
+    
+}
+
+.cotovelo-direito {
+    top: 240px; /* Posição do primeiro botão */
+    left: 265px; /* Posição do primeiro botão */
+    font-size: 24px;
+    
+}
+
+.cotovelo-esquerdo {
+    top: 240px; /* Posição do segundo botão */
+    left: 90px; /* Posição do segundo botão */
+    font-size: 24px;
+    
+}
+
+.mao-direita {
+    top: 345px; /* Posição do primeiro botão */
+    left: 265px; /* Posição do primeiro botão */
+    font-size: 22px;
+    
+}
+
+.mao-esquerda {
+    top: 345px; /* Posição do segundo botão */
+    left: 90px; /* Posição do segundo botão */
+    font-size: 22px;
+    
+}
+
+.quadril-direito {
+    top: 300px; /* Posição do primeiro botão */
+    left: 210px; /* Posição do primeiro botão */
+    font-size: 22px;
+    
+}
+
+.quadril-esquerdo {
+    top: 300px; /* Posição do segundo botão */
+    left: 140px; /* Posição do segundo botão */
+    font-size: 22px;
+    
+}
+
+.joelho-esquerdo {
+    top: 450px; /* Posição do primeiro botão */
+    left: 140px; /* Posição do primeiro botão */
+    font-size: 22px;
+    
+}
+
+.joelho-direito {
+    top: 450px; /* Posição do segundo botão */
+    left: 220px; /* Posição do segundo botão */
+    font-size: 22px;
+    
+}
+
+.tornozelo-direito {
+    top: 600px; /* Posição do primeiro botão */
+    left: 230px; /* Posição do primeiro botão */
+    font-size: 22px;
+    
+}
+
+.tornozelo-esquerdo {
+    top: 600px; /* Posição do primeiro botão */
+    left: 120px; /* Posição do primeiro botão */
+    font-size: 22px;
+    
+}
+
+/* FIM SEÇÃO */
+
+/*SEÇÃO PARTES DO CORPO DE TRÁS*/
+
+.pescoço {
+    font-size: 14px;
+    top: 120px; /* Posição do primeiro botão */
+    left: 180px; /* Posição do primeiro botão */
+    
+    
+}
+
+.trapezio-posterior-direito {
+    font-size: 16px;
+    top: 120px; /* Posição do primeiro botão */
+    left: 220px; /* Posição do primeiro botão */
+    
+    
+}
+
+.trapezio-posterior-esquerdo {
+    font-size: 16px;
+    top: 120px; /* Posição do segundo botão */
+    left: 135px; /* Posição do segundo botão */
+    
+}
+
+.ombro-posterior-direito {
+    font-size: 16px;
+    top: 150px; /* Posição do primeiro botão */
+    left: 250px; /* Posição do primeiro botão */
+    
+    
+}
+
+.ombro-posterior-esquerdo {
+    font-size: 16px;
+    top: 150px; /* Posição do segundo botão */
+    left: 105px; /* Posição do segundo botão */
+    
+}
+
+#cotovelo-direito-back {
+    top: 240px; /* Posição do primeiro botão */
+    left: 265px; /* Posição do primeiro botão */
+    font-size: 24px;
+    
+}
+
+#cotovelo-esquerdo-back {
+    top: 240px; /* Posição do segundo botão */
+    left: 90px; /* Posição do segundo botão */
+    font-size: 24px;
+    
+}
+
+#mao-direita-back {
+    top: 345px; /* Posição do primeiro botão */
+    left: 265px; /* Posição do primeiro botão */
+    font-size: 22px;
+    
+}
+
+#mao-esquerda-back {
+    top: 345px; /* Posição do segundo botão */
+    left: 90px; /* Posição do segundo botão */
+    font-size: 22px;
+    
+}
+
+.quadril-posterior-direito {
+    top: 300px; /* Posição do primeiro botão */
+    left: 210px; /* Posição do primeiro botão */
+    font-size: 22px;
+    
+}
+
+.coluna {
+    top: 210px; /* Posição do primeiro botão */
+    left: 178px; /* Posição do primeiro botão */
+    font-size: 20px;
+    
+}
+
+.lombar {
+    top: 270px; /* Posição do primeiro botão */
+    left: 178px; /* Posição do primeiro botão */
+    font-size: 20px;
+    
+}
+
+.quadril-posterior-esquerdo {
+    top: 300px; /* Posição do segundo botão */
+    left: 140px; /* Posição do segundo botão */
+    font-size: 22px;
+    
+}
+
+.joelho-posterior-direito {
+    top: 450px; /* Posição do primeiro botão */
+    left: 220px; /* Posição do primeiro botão */
+    font-size: 22px;
+    
+}
+
+.joelho-posterior-esquerdo {
+    top: 450px; /* Posição do segundo botão */
+    left: 140px; /* Posição do segundo botão */
+    font-size: 22px;
+    
+}
+
+.tornozelo-posterior-direito {
+    top: 600px; /* Posição do primeiro botão */
+    left: 230px; /* Posição do primeiro botão */
+    font-size: 22px;
+    
+}
+
+.tornozelo-posterior-esquerdo {
+    top: 600px; /* Posição do primeiro botão */
+    left: 120px; /* Posição do primeiro botão */
+    font-size: 22px;
+    
+}
+
+/*FIM SEÇÃO*/
+
+/*Seção das caixas de mensagens*/
+
+.result-body::-webkit-scrollbar,
+.result-body-back::-webkit-scrollbar,
+.type-pains::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome e no Safari */
+}
+
+.result-body h1,
+.result-body-back h1{
+    font-size: 20px;
+    text-align: left;
+}
+
+.result-body h2,
+.result-body-back h2{
+    font-size: 18px;
+    text-align: left;
+}
+
+.result-body{
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background-color: #3E1F65;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    overflow-y: auto;
+    height: 600px;
+    
+}
+
+.result-body p,.result-body ul,.result-body ol {
+    line-height: 1.6;
+}
+.result-body-back p,.result-body-back ul,.result-body-back ol {
+    line-height: 1.6;
+}
+.type-pains p,.type-pains ul,.type-pains ol {
+    line-height: 1.6;
+}
+
+.result-body-back{
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background-color: #3E1F65;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    margin-bottom: 30px;
+    overflow-y: scroll;
+    height: 600px;
+}
+
+.type-pains{
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background-color: #3E1F65;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    overflow-y: scroll;
+    height: 600px;
+}
+
+.close-buttons:hover{
+    background-color: #762ccf;
+}
+
+/*FIM SEÇÃO */
+
+.img-body {
+    position: relative;
+    text-align: center; /* Centralizar conteúdo dentro da div */
+}
+
+.img-body img {
+    display: block; /* Para evitar espaços indesejados */
+    margin: 0 auto; /* Centralizar horizontalmente */
+    max-width: 100%; /* Para garantir que a imagem não ultrapasse a largura da div */
+}
+
+.imgs-js{
+    text-align: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .logo a{
+        font-size: 12px;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+
+    header{
+        width: 97.3%;
+        right: 4px;
+        position: relative; 
+    }
+
+    .imgs-js img{
+        width: 300px;
+    }
+
+    #img-pesc{
+        height: 400px;
+    }
+
+    #img-pesc2{
+        height: 120px;
+    }
+
+    #rodape{
+        width: 96.2%;
+    }
+
+    .body{
+        position: relative;
+        margin: 0 auto;
+        width: 350px; /* Defina a largura desejada */
+        height: auto; /* A altura será ajustada automaticamente */
+    }
+
+    .result-body,
+    .result-body-back,
+    .type-pains {
+        padding: 10px;
+        height: 600px;
+        width: 333px;
+        right: 2px;
+    }
+    
+    .trapezio-direito,
+    .trapezio-esquerdo,
+    .ombro-direito,
+    .ombro-esquerdo,
+    .cotovelo-direito,
+    .cotovelo-esquerdo,
+    #mao-direita,
+    #mao-esquerda,
+    .quadril-direito,
+    .quadril-esquerdo,
+    .joelho-direito,
+    .joelho-esquerdo,
+    .tornozelo-direito,
+    .tornozelo-esquerdo,
+    .trapezio-posterior-direito,
+    .trapezio-posterior-esquerdo,
+    .ombro-posterior-direito,
+    .ombro-posterior-esquerdo,
+    #cotovelo-direito-back,
+    #cotovelo-esquerdo-back,
+    #mao-direita-back,
+    #mao-esquerda-back,
+    .quadril-posterior-direito,
+    .quadril-posterior-esquerdo,
+    .lombar,
+    .joelho-posterior-direito,
+    .joelho-posterior-esquerdo,
+    .tornozelo-posterior-direito,
+    .tornozelo-posterior-esquerdo,
+    .pescoço,
+    .coluna{
+        font-size: 13px;
+    }
+
+    /*BOTÕES INVISIVEIS PARTE FRENTE*/
+   .trapezio-direito{
+        top: 130px; /* Posição do primeiro botão */
+        left: 195px; /* Posição do primeiro botão */
+    }
+    .trapezio-esquerdo{
+        top: 130px; /* Posição do primeiro botão */
+        left: 125px; /* Posição do primeiro botão */
+    }
+
+    .ombro-direito {
+        top: 150px; /* Posição do primeiro botão */
+        left: 230px; /* Posição do primeiro botão */
+    }
+    
+    .ombro-esquerdo {
+        top: 150px; /* Posição do segundo botão */
+        left: 90px; /* Posição do segundo botão */
+    }
+    
+    .quadril-direito {
+        top: 300px; /* Posição do primeiro botão */
+        left: 200px; /* Posição do primeiro botão */
+    }
+    
+    .quadril-esquerdo {
+        top: 300px; /* Posição do segundo botão */
+        left: 120px; /* Posição do segundo botão */
+    }
+    
+    .joelho-esquerdo {
+        top: 450px; /* Posição do primeiro botão */
+        left: 120px; /* Posição do primeiro botão */
+    }
+    
+    .joelho-direito {
+        top: 450px; /* Posição do segundo botão */
+        left: 200px; /* Posição do segundo botão */
+    }
+    
+    .tornozelo-direito {
+        top: 600px; /* Posição do primeiro botão */
+        left: 220px; /* Posição do primeiro botão */
+    }
+    
+    .tornozelo-esquerdo {
+        top: 600px; /* Posição do primeiro botão */
+        left: 110px; /* Posição do primeiro botão */
+    }
+    /*FIM BOTÕES INVISIVEIS FRENTE*/
+    
+    /*SEÇÃO PARTES DO CORPO DE TRÁS*/
+
+    .pescoço {
+        top: 120px; /* Posição do primeiro botão */
+        left: 155px; /* Posição do primeiro botão */
+    }
+
+    .trapezio-posterior-direito {
+        top: 125px; /* Posição do primeiro botão */
+        left: 195px; /* Posição do primeiro botão */
+    }
+
+    .trapezio-posterior-esquerdo {
+        top: 125px; /* Posição do segundo botão */
+        left: 115px; /* Posição do segundo botão */
+    }
+
+    .ombro-posterior-direito {
+        top: 155px; /* Posição do primeiro botão */
+        left: 225px; /* Posição do primeiro botão */
+    }
+
+    .ombro-posterior-esquerdo {
+        top: 155px; /* Posição do segundo botão */
+        left: 85px; /* Posição do segundo botão */
+    }
+
+    #cotovelo-direito-back {
+        top: 240px; /* Posição do primeiro botão */
+        left: 250px; /* Posição do primeiro botão */
+    }
+
+    #cotovelo-esquerdo-back {
+        top: 240px; /* Posição do segundo botão */
+        left: 80px; /* Posição do segundo botão */ 
+    }
+
+    #mao-direita-back {
+        top: 345px; /* Posição do primeiro botão */
+        left: 250px; /* Posição do primeiro botão */
+    }
+
+    #mao-esquerda-back {
+        top: 345px; /* Posição do segundo botão */
+        left: 80px; /* Posição do segundo botão */
+    }
+
+    .quadril-posterior-direito {
+        top: 300px; /* Posição do primeiro botão */
+        left: 195px; /* Posição do primeiro botão */
+    }
+
+    .quadril-posterior-esquerdo {
+        top: 300px; /* Posição do segundo botão */
+        left: 120px; /* Posição do segundo botão */
+    }
+
+    .coluna {
+        top: 210px; /* Posição do primeiro botão */
+        left: 160px; /* Posição do primeiro botão */
+    }
+
+    .lombar {
+        top: 270px; /* Posição do primeiro botão */
+        left: 160px; /* Posição do primeiro botão */
+    }
+
+    .joelho-posterior-direito {
+        top: 450px; /* Posição do primeiro botão */
+        left: 200px; /* Posição do primeiro botão */
+    }
+
+    .joelho-posterior-esquerdo {
+        top: 450px; /* Posição do segundo botão */
+        left: 120px; /* Posição do segundo botão */
+    }
+
+    .tornozelo-posterior-direito {
+        top: 600px; /* Posição do primeiro botão */
+        left: 210px; /* Posição do primeiro botão */
+    }
+
+    .tornozelo-posterior-esquerdo {
+        top: 600px; /* Posição do primeiro botão */
+        left: 110px; /* Posição do primeiro botão */
+    }
+
+    /*FIM SEÇÃO*/
+
+    .button {
+        font-size: 14px;
+    }
+    #button-articulacoes {
+        left: 5%; /* Ajuste para telas menores */
+    }
+
+    #button-musculares {
+        left: 25%; /* Ajuste para telas menores */
+    }
+
+    #button-osseas {
+        left: 44%; /* Ajuste para telas menores */
+    }
+
+    #button-hernias {
+        left: 65%; /* Ajuste para telas menores */
+    }
+
+    #button-lesoes {
+        left: 85%; /* Ajuste para telas menores */
+    }
+    
+}
+
+/* Adaptação para Galaxy Fold */
+
+@media screen and (max-width: 280px) and (max-height: 1354px) {
+    body {
+        font-size: 12px; /* Reduz o tamanho da fonte para telas menores */
+    }
+
+    header {
+        width: 96.3%; /* Ajuste na largura do cabeçalho */
+    }
+
+    #rodape {
+        width: 95.3%; /* Ajuste na largura do rodapé */
+        left: 0;
+    }
+
+    #img-coluna{
+        height: 200px;
+    }
+
+    #img-pescoco{
+        height: 150px;
+    }
+
+    #img-trap{
+        height: 180px;
+    }
+
+    #img-pesc{
+        height: 400px;
+    }
+
+    #img-pesc2{
+        height: 100px;
+    }
+
+    .imgs-js img{
+        width: 320px;
+        height: 250px;
+    }
+
+    .logo a {
+        font-size: 10px;
+    }
+    
+    #img-ortolab {
+        width: 110px;
+        height: 35px;
+    }
+
+    .button button{
+        padding: 15px 1px;
+    }
+
+    #button-articulacoes{
+        left: 1vh; /* Ajuste para telas menores */
+    }
+
+    #button-musculares {
+        left: 9vh; /* Ajuste para telas menores */
+    }
+
+    #button-osseas {
+        left: 16.5vh; /* Ajuste para telas menores */
+    }
+
+    #button-hernias {
+        left: 24.2vh; /* Ajuste para telas menores */
+    }
+
+    #button-lesoes {
+        left: 31.9vh; /* Ajuste para telas menores */
+    }
+
+    .body {
+        width: 270px; /* Ajuste na largura do conteúdo principal */
+    }
+
+    .imgs-js img{
+        width: 250px;
+        height: 300px;
+    }
+
+    .box img{
+        width: 35px;
+        height: 35px;
+    }
+
+    .box{
+        width: 10px;
+        margin-left: 5px;
+    }
+
+    .result-body,
+    .result-body-back,
+    .type-pains {
+        width: 250px; /* Ajuste na largura das caixas de mensagens */
+    }
+
+    /* Ajustes nos botões invisíveis */
+    .button {
+        font-size: 10px; /* Reduz o tamanho da fonte dos botões */
+    }
+
+    /* Ajustes na posição dos botões das partes do corpo */
+    .trapezio-direito,
+    .trapezio-esquerdo,
+    .ombro-direito,
+    .ombro-esquerdo,
+    .cotovelo-direito,
+    .cotovelo-esquerdo,
+    .quadril-direito,
+    .quadril-esquerdo,
+    .joelho-direito,
+    .joelho-esquerdo,
+    .tornozelo-direito,
+    .tornozelo-esquerdo,
+    .trapezio-posterior-direito,
+    .trapezio-posterior-esquerdo,
+    .ombro-posterior-direito,
+    .ombro-posterior-esquerdo,
+    #cotovelo-direito-back,
+    #cotovelo-esquerdo-back,
+    #mao-direita,
+    #mao-esquerda,
+    #mao-direita-back,
+    #mao-esquerda-back,
+    .quadril-posterior-direito,
+    .quadril-posterior-esquerdo,
+    .lombar,
+    .joelho-posterior-direito,
+    .joelho-posterior-esquerdo,
+    .tornozelo-posterior-direito,
+    .tornozelo-posterior-esquerdo,
+    .pescoço,
+    .coluna {
+        font-size: 11px;
+    }
+
+    .trapezio-direito{
+        top: 130px; /* Posição do primeiro botão */
+        left: 152px; /* Posição do primeiro botão */
+    }
+    .trapezio-esquerdo{
+        top: 130px; /* Posição do primeiro botão */
+        left: 82px; /* Posição do primeiro botão */
+    }
+
+    .ombro-direito {
+        top: 158px; /* Posição do primeiro botão */
+        left: 185px; /* Posição do primeiro botão */
+    }
+
+    .cotovelo-direito {
+        top: 235px; /* Posição do primeiro botão */
+        left: 200px; /* Posição do primeiro botão */
+    }
+
+    .cotovelo-esquerdo {
+        top: 235px; /* Posição do segundo botão */
+        left: 40px; /* Posição do segundo botão */ 
+    }
+
+    #mao-esquerda{
+        left: 40px;
+    }
+
+    #mao-direita{
+        left: 200px;
+    }
+    
+    .ombro-esquerdo {
+        top: 158px; /* Posição do segundo botão */
+        left: 50px; /* Posição do segundo botão */
+    }
+    
+    .quadril-direito {
+        top: 300px; /* Posição do primeiro botão */
+        left: 160px; /* Posição do primeiro botão */
+    }
+    
+    .quadril-esquerdo {
+        top: 300px; /* Posição do segundo botão */
+        left: 80px; /* Posição do segundo botão */
+    }
+    
+    .joelho-esquerdo {
+        top: 450px; /* Posição do primeiro botão */
+        left: 75px; /* Posição do primeiro botão */
+    }
+    
+    .joelho-direito {
+        top: 450px; /* Posição do segundo botão */
+        left: 155px; /* Posição do segundo botão */
+    }
+    
+    .tornozelo-direito {
+        top: 590px; /* Posição do primeiro botão */
+        left: 170px; /* Posição do primeiro botão */
+    }
+    
+    .tornozelo-esquerdo {
+        top: 590px; /* Posição do primeiro botão */
+        left: 70px; /* Posição do primeiro botão */
+    }
+    /*FIM BOTÕES INVISIVEIS FRENTE*/
+    
+    /*SEÇÃO PARTES DO CORPO DE TRÁS*/
+
+    .pescoço {
+        top: 110px; /* Posição do primeiro botão */
+        left: 116px; /* Posição do primeiro botão */
+    }
+
+    .trapezio-posterior-direito {
+        top: 115px; /* Posição do primeiro botão */
+        left: 155px; /* Posição do primeiro botão */
+    }
+
+    .trapezio-posterior-esquerdo {
+        top: 115px; /* Posição do segundo botão */
+        left: 78px; /* Posição do segundo botão */
+    }
+
+    .ombro-posterior-direito {
+        top: 145px; /* Posição do primeiro botão */
+        left: 180px; /* Posição do primeiro botão */
+    }
+
+    .ombro-posterior-esquerdo {
+        top: 145px; /* Posição do segundo botão */
+        left: 50px; /* Posição do segundo botão */
+    }
+
+    #cotovelo-direito-back {
+        top: 220px; /* Posição do primeiro botão */
+        left: 195px; /* Posição do primeiro botão */
+    }
+
+    #cotovelo-esquerdo-back {
+        top: 220px; /* Posição do segundo botão */
+        left: 40px; /* Posição do segundo botão */ 
+    }
+
+
+    #mao-direita-back {
+        top: 310px; /* Posição do primeiro botão */
+        left: 195px; /* Posição do primeiro botão */
+    }
+
+    #mao-esquerda-back {
+        top: 310px; /* Posição do segundo botão */
+        left: 40px; /* Posição do segundo botão */
+    }
+
+    .quadril-posterior-direito {
+        top: 265px; /* Posição do primeiro botão */
+        left: 155px; /* Posição do primeiro botão */
+    }
+
+    .quadril-posterior-esquerdo {
+        top: 265px; /* Posição do segundo botão */
+        left: 82px; /* Posição do segundo botão */
+    }
+
+    .coluna {
+        top: 190px; /* Posição do primeiro botão */
+        left: 116px; /* Posição do primeiro botão */
+    }
+
+    .lombar {
+        top: 245px; /* Posição do primeiro botão */
+        left: 118px; /* Posição do primeiro botão */
+    }
+
+    .joelho-posterior-direito {
+        top: 412px; /* Posição do primeiro botão */
+        left: 150px; /* Posição do primeiro botão */
+    }
+
+    .joelho-posterior-esquerdo {
+        top: 412px; /* Posição do segundo botão */
+        left: 80px; /* Posição do segundo botão */
+    }
+
+    .tornozelo-posterior-direito {
+        top: 550px; /* Posição do primeiro botão */
+        left: 160px; /* Posição do primeiro botão */
+    }
+
+    .tornozelo-posterior-esquerdo {
+        top: 550px; /* Posição do primeiro botão */
+        left: 70px; /* Posição do primeiro botão */
+    }
+
+    /*FIM SEÇÃO*/
+}

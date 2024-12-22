@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrtoLab</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="style/style-home.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img id="img-ortolab" height="60" src="img/logo.png" alt="OrtoLab" title="OrtoLab"
+                onclick="window.location.href = 'index.html'" ;>
+            <a href="index.html">TELA INICIAL</a>
+            <a href="index2.html">IDENTIFIQUE SUA DOR</a>
+            <a href="index3.html">CLINICAS PRÓXIMAS</a>
+        </div>
+    </header>
+
+    <div class="home">
+        <div class="img-home">
+            <img src="img/ball-logo.png" alt="Logo do OrtoLab">
+        </div>
+        <div class="text">
+            <h1>Bem-vindo ao OrtoLab - O seu destino para uma vida sem limitações.</h1>
+            <p>Somos uma equipe apaixonada por ortopedia, dedicada a proporcionar cuidados excepcionais e soluções
+                personalizadas para todas as suas necessidades musculoesqueléticas.</p>
+            <p>Descubra como podemos ajudá-lo a recuperar sua mobilidade, aliviar a dor e retomar sua vida ativa.</p>
+            <a href="#" class="btn" onclick="services()">Explore nossos serviços</a>
+            <div id="alert-dialog" class="alert-dialog">
+                <h1>Nossos Serviços</h1>
+
+                <h2>Informações sobre Saúde:</h2>
+
+
+                <p>No nosso site, oferecemos uma seção interativa onde os usuários podem explorar o corpo humano
+                    clicando em diferentes áreas para obter informações valiosas sobre saúde. Se você está
+                    enfrentando dores, aqui está o que você pode encontrar:</p>
+                <button class="services-btn" onclick="window.location.href = 'index2.html'" ;>Identifique sua
+                    dor</button>
+
+                <h2>Encontre Clínicas Próximas de Você:</h2>
+                <p>
+                    Descubra clínicas de saúde próximas a você com facilidade! Nossa plataforma oferece uma maneira
+                    conveniente de localizar clínicas e consultórios médicos na sua região.
+                </p>
+                <button class="services-btn" onclick="window.location.href = 'index3.html'";>Clinicas Próximas</button>
+                <br>
+                <button id="close-alert" class="btn" onclick="closeAlert()">Fechar</button>
+            </div>
+        </div>
+    </div>
+    <footer id="rodape">
+        <p>© 2024 OrtoLab. Todos os direitos reservados. Desenvolvido por Israel.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
